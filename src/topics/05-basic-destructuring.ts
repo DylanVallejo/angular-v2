@@ -26,5 +26,13 @@ const { author:name } = details; //desestructurando en otra linea para mantener 
 
 console.table({song, songDuration , name} )
 
+//podemos darle nombre directamente a las posiciones del arreglo desestructurandoo valores si no existen 
+const [p1, p2, broly]: string[] = ['Goku', 'Vegeta', 'Broly'];
+// const trunks = dbz[3] || "No existe el personaje";
+
+console.log('Personaje 3: ' ,broly)
+
+
+
 
 export{};
