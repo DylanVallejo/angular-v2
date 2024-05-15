@@ -5,25 +5,41 @@ export class Person {
     // forma corta para definir clases en typescript se lo realiza en el constructor
     constructor(
         public name:string ,
+        public lastName: string,
         private address: string  = 'No address'
     ) {}
     
 }
 
-export class Hero extends Person {
+export class Hero  {
+    
+    // public person: Person;
     
     constructor(
         public alterEgo : string,
         public age : number, 
-        public realName: string
+        public realName: string,
+        public person: Person
     ){
-        super( realName, 'Durotar' )
+        // this.person = new Person(realName);
     }
     
 }
+// export class Hero extends Person {
+    
+//     constructor(
+//         public alterEgo : string,
+//         public age : number, 
+//         public realName: string
+//     ){
+//         super( realName, 'Durotar' )
+//     }
+    
+// }
 
 
-const ironMan = new Hero('Kael', 100, 'Kaeltalas', );
+const kael = new Person('Kael',"Talas", "Durotar")
+const ironMan = new Hero('Kael', 100, 'Kaeltalas', kael );
 
 
 console.log(ironMan);
